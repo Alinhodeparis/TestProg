@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{a24eb614-a183-400f-8207-1e58d61945d6}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>9</VersionMajor>
+      <Guid>a24eb614-a183-400f-8207-1e58d61945d6</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Interop.MFilesAPI" Version="23.6.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Setup.Configuration.Interop" Version="3.6.2115" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="interop.mathcad">
+      <HintPath>..\..\..\Program Files\PTC\Mathcad Prime 9.0.0.0\interop.mathcad.dll</HintPath>
+    </Reference>
+    <Reference Include="Ptc.Calculation">
+      <HintPath>..\..\..\Program Files\PTC\Mathcad Prime 8.0.0.0\Ptc.Calculation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ptc.MathcadPrime.Automation">
+      <HintPath>..\..\..\Program Files\PTC\Mathcad Prime 8.0.0.0\Ptc.MathcadPrime.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkSheetConverterControl">
+      <HintPath>..\..\..\Program Files\PTC\Mathcad Prime 8.0.0.0\WorkSheetConverterControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
